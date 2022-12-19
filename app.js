@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyparser = require('body-parser');
 const port = process.env.PORT || 3000;
-// const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }));
